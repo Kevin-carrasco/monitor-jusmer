@@ -6,16 +6,6 @@ La app es independiente de la encuesta: **solo lee** la tabla de respuestas y nu
 
 ![Resumen del monitor](docs/capturas/resumen.png)
 
-## Estado actual
-
-La app funciona por ahora con **datos simulados** (modo `demo`), con la misma estructura de columnas que la tabla de respuestas que surveydown escribe en Supabase (`jusmer_ola1_responses`). Las cifras de ese modo son inventadas y sirven solo para revisar el diseño. El modo `base` lee la base real; la conexión ya se probó con las credenciales de la encuesta (35 sesiones al 20-10-2026).
-
-## Verla en el computador
-
-```r
-install.packages(c("shiny", "bslib", "dplyr", "ggplot2", "DT", "scales", "yaml"))
-shiny::runApp()   # desde la carpeta del repositorio
-```
 
 ## Qué muestra
 
@@ -60,59 +50,3 @@ monitor-jusmer/
 
 Si cambia el cuestionario: copiar de nuevo `surveys/ola1/_survey/questions.yml` a `config/questions.yml` y ajustar las listas de `R/config.R` (bloques, módulos y etiquetas breves).
 
-## Conexión en vivo con Supabase
-
-La encuesta guarda cada respuesta en la tabla `jusmer_ola1_responses` de Supabase (Postgres) y la va actualizando a medida que la persona avanza. El monitor consulta esa misma tabla directamente, así que **no hay que descargar datos**: cada lectura trae el estado actual del campo, incluidas las sesiones en curso. Solo se leen las columnas necesarias (se excluyen `ip_address`, `cbc_profiles`, los `*_hist` y los `time_q_*`).
-
-### 1. Crear un usuario de solo lectura
-
-Se recomienda no reutilizar las credenciales de la encuesta (que pueden escribir). En el SQL Editor de Supabase:
-
-```sql
-create role monitor_lectura with login password 'UNA-CLAVE-LARGA';
-grant usage on schema public to monitor_lectura;
-grant select on public.jusmer_ola1_responses to monitor_lectura;
-
--- Si la tabla tiene Row Level Security activado, el rol necesita además
--- una política que le permita leer:
-create policy "monitor solo lectura" on public.jusmer_ola1_responses
-  for select to monitor_lectura using (true);
-```
-
-### 2. Credenciales
-
-Copiar `.env.example` a `.env` y completar los datos que aparecen en Supabase en **Connect** (transaction pooler), con el usuario de solo lectura:
-
-```
-MONITOR_MODO=base
-SD_HOST=aws-0-xx-xxxx-x.pooler.supabase.com
-SD_PORT=6543
-SD_DBNAME=postgres
-SD_USER=monitor_lectura.<project-ref>
-SD_PASSWORD=UNA-CLAVE-LARGA
-SD_TABLE=jusmer_ola1_responses
-```
-
-Con el pooler de Supabase, el usuario suele llevar el identificador del proyecto (`rol.<project-ref>`, igual que `postgres.<project-ref>`); conviene confirmarlo en el panel de conexión. El `.env` está en `.gitignore` y no debe subirse al repositorio.
-
-Instalar además `DBI` y `RPostgres`:
-
-```r
-install.packages(c("DBI", "RPostgres"))
-```
-
-### 3. Desplegar en Posit Connect Cloud
-
-Igual que la encuesta (`surveys/ola1/POSIT_CLOUD.md`): desde la carpeta del repositorio,
-
-```r
-readRenviron(".env")   # carga las credenciales en la sesión para subirlas como secretos
-rsconnect::deployApp(appName = "monitor-ola1", appTitle = "Monitor JusMer · Ola 1",
-                     appFiles = c("app.R", "R", "config"), envVars = c(
-                       "MONITOR_MODO", "SD_HOST", "SD_PORT", "SD_DBNAME",
-                       "SD_USER", "SD_PASSWORD", "SD_TABLE"))
-```
-
-Si hay más de una cuenta registrada en `rsconnect`, agregar `server = "connect.posit.cloud"`. Las variables se suben como secretos del contenido y no quedan en los archivos. Como el monitor muestra datos del campo, conviene dejar el acceso del contenido como **privado** (solo el equipo) en la configuración de Connect Cloud. En el plan gratuito, este despliegue ocupa uno de los cupos de aplicaciones.
-
-Variables opcionales: `MONITOR_META_N` (meta de completas, por defecto 3000) y `MONITOR_REFRESCO_SEG` (segundos entre lecturas, por defecto 60).
