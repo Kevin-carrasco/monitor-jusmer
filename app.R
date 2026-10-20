@@ -484,16 +484,25 @@ server <- function(input, output, session) {
     d <- completas()
     x <- d$duracion_min[!is.na(d$duracion_min)]
     if (length(x) == 0) return(sin_datos())
-    tope <- stats::quantile(x, 0.98)
+    tope <- min(stats::quantile(x, 0.98, names = FALSE), DURACION_MAX_MIN)
+    n_sobre <- sum(x > tope)
+    eje_x <- if (n_sobre > 0) {
+      sprintf("Minutos (%s %s de más de %s min se %s al final)",
+              n_sobre, if (n_sobre == 1) "encuesta" else "encuestas", num_es(tope, 1),
+              if (n_sobre == 1) "agrupa" else "agrupan")
+    } else {
+      "Minutos"
+    }
     ggplot(data.frame(x = pmin(x, tope)), aes(x = x)) +
-      geom_histogram(binwidth = 1, fill = COLORES$serie1, colour = COLORES$superficie, linewidth = 0.4) +
+      geom_histogram(binwidth = max(1, round(tope / 60)), boundary = 0,
+                     fill = COLORES$serie1, colour = COLORES$superficie, linewidth = 0.4) +
       geom_vline(xintercept = stats::median(x), colour = COLORES$tinta, linewidth = 0.6) +
       geom_vline(xintercept = stats::median(x) / 3, colour = COLORES$critico, linewidth = 0.6, linetype = "22") +
       annotate("label", x = stats::median(x), y = Inf, vjust = 1.3,
                label = paste("Mediana:", num_es(stats::median(x), 0.1), "min"),
                size = 3.4, fill = COLORES$superficie, label.size = 0) +
       scale_y_continuous(expand = expansion(mult = c(0, 0.12))) +
-      labs(x = "Minutos (los valores sobre el percentil 98 se agrupan al final)", y = "Encuestas") +
+      labs(x = eje_x, y = "Encuestas") +
       tema_monitor()
   }, bg = COLORES$superficie, res = 96)
 

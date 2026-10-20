@@ -17,6 +17,10 @@ REFRESCO_SEG <- as.integer(Sys.getenv("MONITOR_REFRESCO_SEG", "60"))
 # un caso cuenta como completo si respondió alguna de ellas.
 VARS_FIN <- c("salud_prov", "educ_prov")
 
+# Tope del eje del gráfico de duración (minutos): las encuestas más largas
+# (p. ej. sesiones que quedaron abiertas) se agrupan en la última barra.
+DURACION_MAX_MIN <- 180
+
 # Valores especiales usados en todo el cuestionario
 COD_NS <- "98"
 COD_NR <- "99"
