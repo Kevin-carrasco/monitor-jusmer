@@ -1,0 +1,13 @@
+# Credenciales: nunca subir
+.env
+.Renviron
+
+# R / RStudio
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+rsconnect/
+
+# Sistema
+.DS_Store

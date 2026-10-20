@@ -1,0 +1,1195 @@
+# ! JUST READ - don't change the content of this file
+# Question structure extracted from survey.html
+consent_understand:
+  index: 1
+  type: mc
+  label:
+  - Si acepta participar en este estudio, por favor haga clic en la celda de abajo
+    que indica que acepta participar voluntariamente. Al aceptar participar usted
+    declara que lo hace de forma informada, es decir, que ha leído y comprendido las
+    condiciones de su participación en este estudio en los términos antes señalados,
+    y ha tenido la oportunidad de hacer preguntas y que estas sean respondidas, sin
+    que le queden dudas al respecto. Una vez que acepte participar haciendo clic en
+    la celda respectiva, se le dará acceso a la encuesta del estudio.
+  - ¡Muchas gracias!
+  options:
+    Sí, acepto voluntariamente participar en este estudio: 'yes'
+    No acepto participar en este estudio: 'no'
+sexo:
+  index: 2
+  type: mc
+  label: ¿Cuál es su sexo?
+  options:
+    Masculino: '0'
+    Femenino: '1'
+    Otro: '99'
+year_of_birth:
+  index: 3
+  type: select
+  label: ¿En qué año nació?
+  options:
+    Prefiero no decir: prefer_not_say
+    '2008': '2008'
+    '2007': '2007'
+    '2006': '2006'
+    '2005': '2005'
+    '2004': '2004'
+    '2003': '2003'
+    '2002': '2002'
+    '2001': '2001'
+    '2000': '2000'
+    '1999': '1999'
+    '1998': '1998'
+    '1997': '1997'
+    '1996': '1996'
+    '1995': '1995'
+    '1994': '1994'
+    '1993': '1993'
+    '1992': '1992'
+    '1991': '1991'
+    '1990': '1990'
+    '1989': '1989'
+    '1988': '1988'
+    '1987': '1987'
+    '1986': '1986'
+    '1985': '1985'
+    '1984': '1984'
+    '1983': '1983'
+    '1982': '1982'
+    '1981': '1981'
+    '1980': '1980'
+    '1979': '1979'
+    '1978': '1978'
+    '1977': '1977'
+    '1976': '1976'
+    '1975': '1975'
+    '1974': '1974'
+    '1973': '1973'
+    '1972': '1972'
+    '1971': '1971'
+    '1970': '1970'
+    '1969': '1969'
+    '1968': '1968'
+    '1967': '1967'
+    '1966': '1966'
+    '1965': '1965'
+    '1964': '1964'
+    '1963': '1963'
+    '1962': '1962'
+    '1961': '1961'
+    '1960': '1960'
+    '1959': '1959'
+    '1958': '1958'
+    '1957': '1957'
+    '1956': '1956'
+    '1955': '1955'
+    '1954': '1954'
+    '1953': '1953'
+    '1952': '1952'
+    '1951': '1951'
+    '1950': '1950'
+    '1949': '1949'
+    '1948': '1948'
+    '1947': '1947'
+    '1946': '1946'
+    '1945': '1945'
+    '1944': '1944'
+    '1943': '1943'
+    '1942': '1942'
+    '1941': '1941'
+    '1940': '1940'
+    '1939': '1939'
+    '1938': '1938'
+    '1937': '1937'
+    '1936': '1936'
+    '1935': '1935'
+    '1934': '1934'
+    '1933': '1933'
+    '1932': '1932'
+    '1931': '1931'
+    '1930': '1930'
+    '1929': '1929'
+    '1928': '1928'
+    '1927': '1927'
+    '1926': '1926'
+    '1925': '1925'
+    '1924': '1924'
+    '1923': '1923'
+    '1922': '1922'
+    '1921': '1921'
+    '1920': '1920'
+education:
+  index: 4
+  type: select
+  label: ¿Cuál es el nivel educativo más alto que ha completado? Si actualmente está
+    estudiando, use el grado más alto que haya obtenido.
+  options:
+    Sin estudios: '0'
+    Educación básica incompleta: '1'
+    Educación básica completa: '2'
+    Educación media incompleta: '3'
+    Educación media completa: '4'
+    Técnica superior incompleta (instituto o CFT): '5'
+    Técnica superior completa (instituto o CFT): '6'
+    Universitaria incompleta: '7'
+    Universitaria completa: '8'
+    Estudios de posgrado (magíster o doctorado): '9'
+    Prefiero no decir: prefer_not_to_say
+cbc_practice:
+  index: 5
+  type: slider_numeric
+  label: []
+  default: 1000000.0
+  options:
+    '0': 0.0
+    1e+05: 100000.0
+    2e+05: 200000.0
+    3e+05: 300000.0
+    4e+05: 400000.0
+    5e+05: 500000.0
+    6e+05: 600000.0
+    7e+05: 700000.0
+    8e+05: 800000.0
+    9e+05: 900000.0
+    1e+06: 1000000.0
+    '1100000': 1100000.0
+    '1200000': 1200000.0
+    '1300000': 1300000.0
+    '1400000': 1400000.0
+    '1500000': 1500000.0
+    '1600000': 1600000.0
+    '1700000': 1700000.0
+    '1800000': 1800000.0
+    '1900000': 1900000.0
+    2e+06: 2000000.0
+cbc_practice_nr:
+  index: 6
+  type: mc_multiple
+  label: []
+  options:
+    Prefiero no responder: '99'
+manip_check:
+  index: 7
+  type: mc
+  label: Antes de continuar, ¿en qué consistirá su tarea en esta sección?
+  options:
+    Repartir un monto de beca entre dos postulantes: reparto
+    Elegir a un único postulante y descartar al otro: eleccion
+    Evaluar la calidad de la universidad de cada postulante: universidad
+cbc_q1:
+  index: 8
+  type: slider_numeric
+  label: []
+  default: 1000000.0
+  options:
+    '0': 0.0
+    1e+05: 100000.0
+    2e+05: 200000.0
+    3e+05: 300000.0
+    4e+05: 400000.0
+    5e+05: 500000.0
+    6e+05: 600000.0
+    7e+05: 700000.0
+    8e+05: 800000.0
+    9e+05: 900000.0
+    1e+06: 1000000.0
+    '1100000': 1100000.0
+    '1200000': 1200000.0
+    '1300000': 1300000.0
+    '1400000': 1400000.0
+    '1500000': 1500000.0
+    '1600000': 1600000.0
+    '1700000': 1700000.0
+    '1800000': 1800000.0
+    '1900000': 1900000.0
+    2e+06: 2000000.0
+cbc_q1_nr:
+  index: 9
+  type: mc_multiple
+  label: []
+  options:
+    Prefiero no responder: '99'
+cbc_q1_hist:
+  index: 10
+  type: text
+  label: []
+cbc_q2:
+  index: 11
+  type: slider_numeric
+  label: []
+  default: 1000000.0
+  options:
+    '0': 0.0
+    1e+05: 100000.0
+    2e+05: 200000.0
+    3e+05: 300000.0
+    4e+05: 400000.0
+    5e+05: 500000.0
+    6e+05: 600000.0
+    7e+05: 700000.0
+    8e+05: 800000.0
+    9e+05: 900000.0
+    1e+06: 1000000.0
+    '1100000': 1100000.0
+    '1200000': 1200000.0
+    '1300000': 1300000.0
+    '1400000': 1400000.0
+    '1500000': 1500000.0
+    '1600000': 1600000.0
+    '1700000': 1700000.0
+    '1800000': 1800000.0
+    '1900000': 1900000.0
+    2e+06: 2000000.0
+cbc_q2_nr:
+  index: 12
+  type: mc_multiple
+  label: []
+  options:
+    Prefiero no responder: '99'
+cbc_q2_hist:
+  index: 13
+  type: text
+  label: []
+cbc_q3:
+  index: 14
+  type: slider_numeric
+  label: []
+  default: 1000000.0
+  options:
+    '0': 0.0
+    1e+05: 100000.0
+    2e+05: 200000.0
+    3e+05: 300000.0
+    4e+05: 400000.0
+    5e+05: 500000.0
+    6e+05: 600000.0
+    7e+05: 700000.0
+    8e+05: 800000.0
+    9e+05: 900000.0
+    1e+06: 1000000.0
+    '1100000': 1100000.0
+    '1200000': 1200000.0
+    '1300000': 1300000.0
+    '1400000': 1400000.0
+    '1500000': 1500000.0
+    '1600000': 1600000.0
+    '1700000': 1700000.0
+    '1800000': 1800000.0
+    '1900000': 1900000.0
+    2e+06: 2000000.0
+cbc_q3_nr:
+  index: 15
+  type: mc_multiple
+  label: []
+  options:
+    Prefiero no responder: '99'
+cbc_q3_hist:
+  index: 16
+  type: text
+  label: []
+cbc_q4:
+  index: 17
+  type: slider_numeric
+  label: []
+  default: 1000000.0
+  options:
+    '0': 0.0
+    1e+05: 100000.0
+    2e+05: 200000.0
+    3e+05: 300000.0
+    4e+05: 400000.0
+    5e+05: 500000.0
+    6e+05: 600000.0
+    7e+05: 700000.0
+    8e+05: 800000.0
+    9e+05: 900000.0
+    1e+06: 1000000.0
+    '1100000': 1100000.0
+    '1200000': 1200000.0
+    '1300000': 1300000.0
+    '1400000': 1400000.0
+    '1500000': 1500000.0
+    '1600000': 1600000.0
+    '1700000': 1700000.0
+    '1800000': 1800000.0
+    '1900000': 1900000.0
+    2e+06: 2000000.0
+cbc_q4_nr:
+  index: 18
+  type: mc_multiple
+  label: []
+  options:
+    Prefiero no responder: '99'
+cbc_q4_hist:
+  index: 19
+  type: text
+  label: []
+cbc_q5:
+  index: 20
+  type: slider_numeric
+  label: []
+  default: 1000000.0
+  options:
+    '0': 0.0
+    1e+05: 100000.0
+    2e+05: 200000.0
+    3e+05: 300000.0
+    4e+05: 400000.0
+    5e+05: 500000.0
+    6e+05: 600000.0
+    7e+05: 700000.0
+    8e+05: 800000.0
+    9e+05: 900000.0
+    1e+06: 1000000.0
+    '1100000': 1100000.0
+    '1200000': 1200000.0
+    '1300000': 1300000.0
+    '1400000': 1400000.0
+    '1500000': 1500000.0
+    '1600000': 1600000.0
+    '1700000': 1700000.0
+    '1800000': 1800000.0
+    '1900000': 1900000.0
+    2e+06: 2000000.0
+cbc_q5_nr:
+  index: 21
+  type: mc_multiple
+  label: []
+  options:
+    Prefiero no responder: '99'
+cbc_q5_hist:
+  index: 22
+  type: text
+  label: []
+cbc_q6:
+  index: 23
+  type: slider_numeric
+  label: []
+  default: 1000000.0
+  options:
+    '0': 0.0
+    1e+05: 100000.0
+    2e+05: 200000.0
+    3e+05: 300000.0
+    4e+05: 400000.0
+    5e+05: 500000.0
+    6e+05: 600000.0
+    7e+05: 700000.0
+    8e+05: 800000.0
+    9e+05: 900000.0
+    1e+06: 1000000.0
+    '1100000': 1100000.0
+    '1200000': 1200000.0
+    '1300000': 1300000.0
+    '1400000': 1400000.0
+    '1500000': 1500000.0
+    '1600000': 1600000.0
+    '1700000': 1700000.0
+    '1800000': 1800000.0
+    '1900000': 1900000.0
+    2e+06: 2000000.0
+cbc_q6_nr:
+  index: 24
+  type: mc_multiple
+  label: []
+  options:
+    Prefiero no responder: '99'
+cbc_q6_hist:
+  index: 25
+  type: text
+  label: []
+transicion_ancla:
+  index: 26
+  type: text
+  label: []
+mj_1:
+  index: 27
+  type: mc
+  label: Es justo que en Chile las personas de altos ingresos puedan acceder a mejor
+    atención en salud que las personas con ingresos más bajos
+  options:
+    Muy de acuerdo: '5'
+    De acuerdo: '4'
+    Ni de acuerdo ni en desacuerdo: '3'
+    En desacuerdo: '2'
+    Muy en desacuerdo: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+mj_2:
+  index: 28
+  type: mc
+  label: Es justo que en Chile las personas de altos ingresos tengan mejor educación
+    para sus hijos que las personas con ingresos más bajos
+  options:
+    Muy de acuerdo: '5'
+    De acuerdo: '4'
+    Ni de acuerdo ni en desacuerdo: '3'
+    En desacuerdo: '2'
+    Muy en desacuerdo: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+mj_3:
+  index: 29
+  type: mc
+  label: Es justo que en Chile las personas de altos ingresos tengan mejores pensiones
+    que las personas con ingresos más bajos
+  options:
+    Muy de acuerdo: '5'
+    De acuerdo: '4'
+    Ni de acuerdo ni en desacuerdo: '3'
+    En desacuerdo: '2'
+    Muy en desacuerdo: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+ref_1:
+  index: 30
+  type: mc
+  label: Es justo que yo tenga acceso a mejor atención en salud si puedo pagar por
+    ello
+  options:
+    Muy de acuerdo: '5'
+    De acuerdo: '4'
+    Ni de acuerdo ni en desacuerdo: '3'
+    En desacuerdo: '2'
+    Muy en desacuerdo: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+ref_2:
+  index: 31
+  type: mc
+  label: Es justo que yo tenga acceso a mejor educación si puedo pagar por ello
+  options:
+    Muy de acuerdo: '5'
+    De acuerdo: '4'
+    Ni de acuerdo ni en desacuerdo: '3'
+    En desacuerdo: '2'
+    Muy en desacuerdo: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+ref_3:
+  index: 32
+  type: mc
+  label: Es justo que yo tenga acceso a mejor pensión si puedo pagar por ello
+  options:
+    Muy de acuerdo: '5'
+    De acuerdo: '4'
+    Ni de acuerdo ni en desacuerdo: '3'
+    En desacuerdo: '2'
+    Muy en desacuerdo: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+proy_1:
+  index: 33
+  type: mc
+  label: Está bien que mis hijos/as tengan acceso a mejor atención en salud que otros
+    niños si es que puedo pagar por ello
+  options:
+    Muy de acuerdo: '5'
+    De acuerdo: '4'
+    Ni de acuerdo ni en desacuerdo: '3'
+    En desacuerdo: '2'
+    Muy en desacuerdo: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+proy_2:
+  index: 34
+  type: mc
+  label: Está bien que mis hijos/as tengan acceso a mejor educación que otros niños
+    si es que puedo pagar por ello
+  options:
+    Muy de acuerdo: '5'
+    De acuerdo: '4'
+    Ni de acuerdo ni en desacuerdo: '3'
+    En desacuerdo: '2'
+    Muy en desacuerdo: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+attention_check:
+  index: 35
+  type: mc
+  label: Esta pregunta es para verificar que está leyendo con atención. Por favor,
+    deje esta pregunta en blanco
+  options:
+    Muy de acuerdo: muy_acuerdo
+    De acuerdo: acuerdo
+    En desacuerdo: desacuerdo
+    Muy en desacuerdo: muy_desacuerdo
+ranking_politicas:
+  index: 36
+  type: matrix
+  label: 'Asigne una prioridad a cada área de inversión de fondos públicos:'
+  row:
+    Educación: educacion
+    Salud: salud
+    Pensiones: pensiones
+    Salas cunas: cuidado_ninos
+    Carreteras: carreteras
+  options:
+    1°: '1'
+    2°: '2'
+    3°: '3'
+    4°: '4'
+    5°: '5'
+ranking_politicas_educacion:
+  index: 37
+  type: mc
+  label: []
+  options:
+    1°: '1'
+    2°: '2'
+    3°: '3'
+    4°: '4'
+    5°: '5'
+ranking_politicas_salud:
+  index: 38
+  type: mc
+  label: []
+  options:
+    1°: '1'
+    2°: '2'
+    3°: '3'
+    4°: '4'
+    5°: '5'
+ranking_politicas_pensiones:
+  index: 39
+  type: mc
+  label: []
+  options:
+    1°: '1'
+    2°: '2'
+    3°: '3'
+    4°: '4'
+    5°: '5'
+ranking_politicas_cuidado_ninos:
+  index: 40
+  type: mc
+  label: []
+  options:
+    1°: '1'
+    2°: '2'
+    3°: '3'
+    4°: '4'
+    5°: '5'
+ranking_politicas_carreteras:
+  index: 41
+  type: mc
+  label: []
+  options:
+    1°: '1'
+    2°: '2'
+    3°: '3'
+    4°: '4'
+    5°: '5'
+dec_3:
+  index: 42
+  type: slider
+  label: Imagine que usted está en un plan de Isapre que está evaluando dar acceso
+    a un 10% de personas en su mismo plan que no pueden pagarlo. Para ello, usted
+    debería pagar un monto adicional a su cotización. En tal situación, ¿cuánto más
+    estaría dispuesto a pagar?
+  options:
+    '0': '0'
+    10%: '10'
+    20%: '20'
+    30%: '30'
+    40%: '40'
+    50%: '50'
+    60%: '60'
+    70%: '70'
+    80%: '80'
+    90%: '90'
+    100%: '100'
+dec_3_nr:
+  index: 43
+  type: mc_multiple
+  label: []
+  options:
+    Prefiero no responder: '99'
+dec_1:
+  index: 44
+  type: slider
+  label: Imagine que su hijo/a asiste a un colegio privado que tiene una matrícula
+    de 100 alumnos. ¿Cuántos alumnos cree Ud. que se deberían admitir sin pagar en
+    este colegio?
+  options:
+    '0': '0'
+    '10': '10'
+    '20': '20'
+    '30': '30'
+    '40': '40'
+    '50': '50'
+    '60': '60'
+    '70': '70'
+    '80': '80'
+    '90': '90'
+    '100': '100'
+dec_1_nr:
+  index: 45
+  type: mc_multiple
+  label: []
+  options:
+    Prefiero no responder: '99'
+dec_1_hist:
+  index: 46
+  type: text
+  label: []
+dec_2:
+  index: 47
+  type: slider
+  label: Para que esos alumnos puedan ser admitidos en el colegio, ¿cuánto más estaría
+    dispuesto a pagar de la mensualidad para poder apoyar a estudiantes que no pagan?
+  options:
+    '0': '0'
+    10%: '10'
+    20%: '20'
+    30%: '30'
+    40%: '40'
+    50%: '50'
+    60%: '60'
+    70%: '70'
+    80%: '80'
+    90%: '90'
+    100%: '100'
+dec_2_nr:
+  index: 48
+  type: mc_multiple
+  label: []
+  options:
+    Prefiero no responder: '99'
+lucro_1:
+  index: 49
+  type: mc
+  label: Salud
+  options:
+    Muy justo: '5'
+    Justo: '4'
+    Ni justo ni injusto: '3'
+    Injusto: '2'
+    Muy injusto: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+lucro_2:
+  index: 50
+  type: mc
+  label: Educación
+  options:
+    Muy justo: '5'
+    Justo: '4'
+    Ni justo ni injusto: '3'
+    Injusto: '2'
+    Muy injusto: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+lucro_3:
+  index: 51
+  type: mc
+  label: Pensiones
+  options:
+    Muy justo: '5'
+    Justo: '4'
+    Ni justo ni injusto: '3'
+    Injusto: '2'
+    Muy injusto: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+control_1:
+  index: 52
+  type: mc
+  label: Las personas que caen en la pobreza por sus propios errores deberían igualmente
+    tener derecho a recibir apoyo del Estado
+  options:
+    Muy de acuerdo: '5'
+    De acuerdo: '4'
+    Ni de acuerdo ni en desacuerdo: '3'
+    En desacuerdo: '2'
+    Muy en desacuerdo: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+control_2:
+  index: 53
+  type: mc
+  label: Quienes son responsables de sus propios problemas igualmente merecen recibir
+    beneficios sociales.
+  options:
+    Muy de acuerdo: '5'
+    De acuerdo: '4'
+    Ni de acuerdo ni en desacuerdo: '3'
+    En desacuerdo: '2'
+    Muy en desacuerdo: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+control_3:
+  index: 54
+  type: mc
+  label: El Estado debería ayudar a las personas independientemente de si su situación
+    fue causada por decisiones propias o por factores externos.
+  options:
+    Muy de acuerdo: '5'
+    De acuerdo: '4'
+    Ni de acuerdo ni en desacuerdo: '3'
+    En desacuerdo: '2'
+    Muy en desacuerdo: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+actitud_1:
+  index: 55
+  type: mc
+  label: Las personas que reciben beneficios del Estado deberían mostrar más gratitud
+    por la ayuda que reciben
+  options:
+    Muy de acuerdo: '5'
+    De acuerdo: '4'
+    Ni de acuerdo ni en desacuerdo: '3'
+    En desacuerdo: '2'
+    Muy en desacuerdo: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+actitud_2:
+  index: 56
+  type: mc
+  label: Está bien que las personas que reciben apoyo del Estado puedan expresar su
+    descontento con las condiciones de los beneficios.
+  options:
+    Muy de acuerdo: '5'
+    De acuerdo: '4'
+    Ni de acuerdo ni en desacuerdo: '3'
+    En desacuerdo: '2'
+    Muy en desacuerdo: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+reciproc_1:
+  index: 57
+  type: mc
+  label: Los beneficios sociales deberían estar reservados para quienes han contribuido
+    previamente al sistema, por ejemplo cotizando o pagando impuestos
+  options:
+    Muy de acuerdo: '5'
+    De acuerdo: '4'
+    Ni de acuerdo ni en desacuerdo: '3'
+    En desacuerdo: '2'
+    Muy en desacuerdo: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+reciproc_2:
+  index: 58
+  type: mc
+  label: No es justo que personas que nunca han contribuido al sistema reciban los
+    mismos beneficios que quienes sí lo han hecho.
+  options:
+    Muy de acuerdo: '5'
+    De acuerdo: '4'
+    Ni de acuerdo ni en desacuerdo: '3'
+    En desacuerdo: '2'
+    Muy en desacuerdo: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+reciproc_3:
+  index: 59
+  type: mc
+  label: Quienes han trabajado y aportado al sistema durante más tiempo merecen mejores
+    beneficios sociales que quienes han contribuido poco o nada
+  options:
+    Muy de acuerdo: '5'
+    De acuerdo: '4'
+    Ni de acuerdo ni en desacuerdo: '3'
+    En desacuerdo: '2'
+    Muy en desacuerdo: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+actitud_4:
+  index: 60
+  type: mc
+  label: El acceso a los beneficios sociales debería ser el mismo para todos, independientemente
+    de si han cotizado o no en el pasado.
+  options:
+    Muy de acuerdo: '5'
+    De acuerdo: '4'
+    Ni de acuerdo ni en desacuerdo: '3'
+    En desacuerdo: '2'
+    Muy en desacuerdo: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+id_1:
+  index: 61
+  type: mc
+  label: Al momento de asignar beneficios sociales, las personas nacidas en Chile
+    deberían tener prioridad por sobre quienes llegaron de otros países.
+  options:
+    Muy de acuerdo: '5'
+    De acuerdo: '4'
+    Ni de acuerdo ni en desacuerdo: '3'
+    En desacuerdo: '2'
+    Muy en desacuerdo: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+id_2:
+  index: 62
+  type: mc
+  label: Los migrantes deberían tener acceso a los mismos beneficios sociales que
+    los chilenos.
+  options:
+    Muy de acuerdo: '5'
+    De acuerdo: '4'
+    Ni de acuerdo ni en desacuerdo: '3'
+    En desacuerdo: '2'
+    Muy en desacuerdo: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+id_3:
+  index: 63
+  type: mc
+  label: Solo quienes llevan varios años viviendo en Chile deberían poder acceder
+    a los programas de protección social del Estado.
+  options:
+    Muy de acuerdo: '5'
+    De acuerdo: '4'
+    Ni de acuerdo ni en desacuerdo: '3'
+    En desacuerdo: '2'
+    Muy en desacuerdo: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+nec_1:
+  index: 64
+  type: mc
+  label: Los beneficios sociales deberían estar reservados exclusivamente para quienes
+    viven en situación de pobreza real.
+  options:
+    Muy de acuerdo: '5'
+    De acuerdo: '4'
+    Ni de acuerdo ni en desacuerdo: '3'
+    En desacuerdo: '2'
+    Muy en desacuerdo: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+nec_2:
+  index: 65
+  type: mc
+  label: Las personas que tienen suficientes recursos económicos propios no deberían
+    recibir apoyo del Estado.
+  options:
+    Muy de acuerdo: '5'
+    De acuerdo: '4'
+    Ni de acuerdo ni en desacuerdo: '3'
+    En desacuerdo: '2'
+    Muy en desacuerdo: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+nec_3:
+  index: 66
+  type: mc
+  label: Solo quienes se encuentran en situación de extrema necesidad deberían poder
+    acceder a los beneficios sociales.
+  options:
+    Muy de acuerdo: '5'
+    De acuerdo: '4'
+    Ni de acuerdo ni en desacuerdo: '3'
+    En desacuerdo: '2'
+    Muy en desacuerdo: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+esf_1:
+  index: 67
+  type: mc
+  label: Las personas que reciben beneficios sociales deberían estar haciendo algo
+    activamente para mejorar su situación, como buscar trabajo o capacitarse
+  options:
+    Muy de acuerdo: '5'
+    De acuerdo: '4'
+    Ni de acuerdo ni en desacuerdo: '3'
+    En desacuerdo: '2'
+    Muy en desacuerdo: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+esf_2:
+  index: 68
+  type: mc
+  label: Quienes reciben ayuda del Estado pero no hacen ningún esfuerzo por salir
+    adelante merecen menos apoyo que quienes sí lo intentan
+  options:
+    Muy de acuerdo: '5'
+    De acuerdo: '4'
+    Ni de acuerdo ni en desacuerdo: '3'
+    En desacuerdo: '2'
+    Muy en desacuerdo: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+esf_3:
+  index: 69
+  type: mc
+  label: El Estado debería apoyar a las personas aunque no estén haciendo ningún esfuerzo
+    visible por cambiar su situación
+  options:
+    Muy de acuerdo: '5'
+    De acuerdo: '4'
+    Ni de acuerdo ni en desacuerdo: '3'
+    En desacuerdo: '2'
+    Muy en desacuerdo: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+esf_4:
+  index: 70
+  type: mc
+  label: Es razonable que la duración de un beneficio social dependa del esfuerzo
+    que está haciendo la persona para dejar de necesitarlo
+  options:
+    Muy de acuerdo: '5'
+    De acuerdo: '4'
+    Ni de acuerdo ni en desacuerdo: '3'
+    En desacuerdo: '2'
+    Muy en desacuerdo: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+esf_5:
+  index: 71
+  type: mc
+  label: 'No importa si alguien está buscando trabajo o no: si necesita ayuda, el
+    Estado debería dársela igual'
+  options:
+    Muy de acuerdo: '5'
+    De acuerdo: '4'
+    Ni de acuerdo ni en desacuerdo: '3'
+    En desacuerdo: '2'
+    Muy en desacuerdo: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+adc_qstn:
+  index: 72
+  type: mc
+  label: ¿Cuál de las siguientes afirmaciones describe mejor su situación actual,
+    considerando el total de ingresos que tiene actualmente?
+  options:
+    Nos alcanza bien, hasta podemos ahorrar: '4'
+    Nos alcanza justo y podemos darnos algunos gustos sin mayores problemas: '3'
+    Nos alcanza con dificultad, ajustando gastos: '2'
+    No nos alcanza, tenemos grandes problemas: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+adc_5:
+  index: 73
+  type: mc
+  label: Que mi situación financiera empeore los próximos años.
+  options:
+    A menudo: '5'
+    Regularmente: '4'
+    A veces: '3'
+    Raramente: '2'
+    Nunca: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+adc_6:
+  index: 74
+  type: mc
+  label: Quedar desempleado
+  options:
+    A menudo: '5'
+    Regularmente: '4'
+    A veces: '3'
+    Raramente: '2'
+    Nunca: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+adc_7:
+  index: 75
+  type: mc
+  label: Que mis hijos/as y las próximas generaciones lo tendrán mucho más difícil
+  options:
+    A menudo: '5'
+    Regularmente: '4'
+    A veces: '3'
+    Raramente: '2'
+    Nunca: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+merit_1:
+  index: 76
+  type: mc
+  label: En Chile las personas son recompensadas por sus esfuerzos
+  options:
+    Muy de acuerdo: '5'
+    De acuerdo: '4'
+    Ni de acuerdo ni en desacuerdo: '3'
+    En desacuerdo: '2'
+    Muy en desacuerdo: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+merit_2:
+  index: 77
+  type: mc
+  label: En Chile las personas son recompensadas por sus talentos
+  options:
+    Muy de acuerdo: '5'
+    De acuerdo: '4'
+    Ni de acuerdo ni en desacuerdo: '3'
+    En desacuerdo: '2'
+    Muy en desacuerdo: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+merit_3:
+  index: 78
+  type: mc
+  label: En Chile a quienes tienen padres ricos les va mucho mejor en la vida
+  options:
+    Muy de acuerdo: '5'
+    De acuerdo: '4'
+    Ni de acuerdo ni en desacuerdo: '3'
+    En desacuerdo: '2'
+    Muy en desacuerdo: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+merit_4:
+  index: 79
+  type: mc
+  label: En Chile a quienes tienen buenos contactos les va mejor en la vida
+  options:
+    Muy de acuerdo: '5'
+    De acuerdo: '4'
+    Ni de acuerdo ni en desacuerdo: '3'
+    En desacuerdo: '2'
+    Muy en desacuerdo: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+merit_5:
+  index: 80
+  type: mc
+  label: Quienes más se esfuerzan deberían obtener mayores recompensas que quienes
+    se esfuerzan menos
+  options:
+    Muy de acuerdo: '5'
+    De acuerdo: '4'
+    Ni de acuerdo ni en desacuerdo: '3'
+    En desacuerdo: '2'
+    Muy en desacuerdo: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+merit_6:
+  index: 81
+  type: mc
+  label: Quienes poseen más talento deberían obtener mayores recompensas que quienes
+    poseen menos talento
+  options:
+    Muy de acuerdo: '5'
+    De acuerdo: '4'
+    Ni de acuerdo ni en desacuerdo: '3'
+    En desacuerdo: '2'
+    Muy en desacuerdo: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+merit_7:
+  index: 82
+  type: mc
+  label: Está bien que quienes tengan padres ricos les vaya mejor en la vida
+  options:
+    Muy de acuerdo: '5'
+    De acuerdo: '4'
+    Ni de acuerdo ni en desacuerdo: '3'
+    En desacuerdo: '2'
+    Muy en desacuerdo: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+merit_8:
+  index: 83
+  type: mc
+  label: Está bien que quienes tengan buenos contactos les vaya mejor en la vida
+  options:
+    Muy de acuerdo: '5'
+    De acuerdo: '4'
+    Ni de acuerdo ni en desacuerdo: '3'
+    En desacuerdo: '2'
+    Muy en desacuerdo: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+gender:
+  index: 84
+  type: select
+  label: ¿Cuál es su identidad de género?
+  options:
+    Hombre: male
+    Mujer: female
+    No binario: non_binary
+    Hombre trans: trans_male
+    Mujer trans: trans_female
+    Prefiero no responder: '99'
+income:
+  index: 85
+  type: select
+  label: ¿Cuál es su ingreso anual del hogar (de todas las fuentes) antes de impuestos
+    y otras deducciones?
+  options:
+    $3.100.000 o más mensuales: '10'
+    De $2.100.000 a $3.099.999 mensuales: '9'
+    De $1.600.000 a $2.099.999 mensuales: '8'
+    De $1.300.000 a $1.599.999 mensuales: '7'
+    De $1.050.000 a $1.299.999 mensuales: '6'
+    De $850.000 a $1.049.999 mensuales: '5'
+    De $680.000 a $849.999 mensuales: '4'
+    De $520.000 a $679.999 mensuales: '3'
+    De $345.000 a $519.999 mensuales: '2'
+    Hasta $344.999 mensuales: '1'
+    No sé: '98'
+    Prefiero no responder: '99'
+estatus_subjetivo:
+  index: 86
+  type: slider
+  label: En nuestra sociedad, hay grupos que tienden a ubicarse en los niveles más
+    altos y grupos que tienden a ubicarse en los niveles más bajos de la sociedad.
+    Usando la escala presentada, donde 0 es el nivel más bajo y 10 el nivel más alto,  ¿Dónde
+    se ubicaría usted en la sociedad chilena?
+  options:
+    '0': '0'
+    '1': '1'
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+    '7': '7'
+    '8': '8'
+    '9': '9'
+    '10': '10'
+estatus_subjetivo_nr:
+  index: 87
+  type: mc_multiple
+  label: []
+  options:
+    Prefiero no responder: '99'
+posicion_politica:
+  index: 88
+  type: slider
+  label: Cambiando de tema, tradicionalmente en nuestro país la gente define las posiciones
+    políticas como más cercanas a la izquierda, al centro o a la derecha. Usando una
+    escala de 0 a 10, donde 0 es ser de ‘izquierda’, 5 es ser de ‘centro’ y 10 es
+    ser de ‘derecha’, ¿Dónde se ubicaría usted en esta escala?
+  options:
+    Izquierda: '0'
+    '1': '1'
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    Centro: '5'
+    '6': '6'
+    '7': '7'
+    '8': '8'
+    '9': '9'
+    Derecha: '10'
+posicion_politica_nr:
+  index: 89
+  type: mc_multiple
+  label: []
+  options:
+    Prefiero no responder: '99'
+salud_prov:
+  index: 90
+  type: mc
+  label: ¿Qué plan de salud tiene?
+  options:
+    FONASA: fonasa
+    ISAPRE: isapre
+educ_prov:
+  index: 91
+  type: mc
+  label: ¿En qué tipo de colegio estudió?
+  options:
+    Particular privado: privado
+    Particular subvencionado: subvencionado
+    Municipal: municipal
+
