@@ -13,6 +13,12 @@ ZONA_HORARIA <- "America/Santiago"
 META_N_DEFAULT <- as.integer(Sys.getenv("MONITOR_META_N", "3000"))
 REFRESCO_SEG <- as.integer(Sys.getenv("MONITOR_REFRESCO_SEG", "60"))
 
+# Inicio del conteo: solo se consideran las sesiones iniciadas desde esta fecha
+# (o fecha y hora, p. ej. "2026-10-28 15:00"), en hora de Chile. Sirve para
+# dejar fuera las pruebas previas al lanzamiento. Se cambia con la variable de
+# entorno MONITOR_DESDE (también desde .env); con "todas", no hay corte.
+INICIO_CONTEO_DEFAULT <- "2026-10-28"
+
 # Variables que solo se responden al final de la encuesta (página id-final):
 # un caso cuenta como completo si respondió alguna de ellas.
 VARS_FIN <- c("salud_prov", "educ_prov")

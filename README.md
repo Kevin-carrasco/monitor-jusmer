@@ -22,6 +22,8 @@ La barra lateral permite filtrar por casos (solo completas o todas las que acept
 
 ### Definiciones
 
+- **Inicio del conteo**: solo se consideran las sesiones iniciadas desde `INICIO_CONTEO_DEFAULT` (`R/config.R`, hora de Chile), para dejar fuera las pruebas previas al lanzamiento. Se cambia con la variable de entorno `MONITOR_DESDE` (p. ej. `2026-10-28` o `2026-10-28 15:00`); con `MONITOR_DESDE=todas` se cuentan todas.
+
 - **Completa**: aceptó el consentimiento y respondió alguna de las preguntas finales (`salud_prov`, `educ_prov`). Se definen en `VARS_FIN` (`R/config.R`).
 - **Abandono**: para las sesiones incompletas, el bloque más avanzado con alguna respuesta, según el orden de módulos de su forma (A: Meritocracia, Actitudes, Merecimiento; B: Merecimiento, Actitudes, Meritocracia).
 - **Sliders con "Prefiero no responder"**: si la casilla `<id>_nr` está marcada, el valor del slider no se considera.

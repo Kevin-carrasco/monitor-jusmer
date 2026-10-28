@@ -21,6 +21,7 @@ library(ggplot2)
 library(DT)
 
 MODO <- modo_datos()
+DESDE <- inicio_conteo()
 BASE_DEMO <- if (MODO == "demo") simular_respuestas(430, semilla = 2026) else NULL
 
 # Componentes de interfaz ------------------------------------------------------
@@ -221,6 +222,11 @@ barra_lateral <- sidebar(
   radioButtons("forma", "Forma de la encuesta", c("Ambas" = "ambas", "A" = "A", "B" = "B"), inline = TRUE),
   dateRangeInput("rango", "Fechas de inicio", start = NULL, end = NULL,
                  format = "dd/mm/yyyy", language = "es", separator = "a"),
+  if (!is.null(DESDE)) helpText(sprintf(
+    "Solo se cuentan las sesiones iniciadas desde el %s.",
+    format(DESDE, if (format(DESDE, "%H:%M", tz = ZONA_HORARIA) == "00:00") "%d/%m/%Y" else "%d/%m/%Y a las %H:%M",
+           tz = ZONA_HORARIA)
+  )),
   numericInput("meta", "Meta de encuestas completas", value = META_N_DEFAULT, min = 1, step = 100),
   hr(),
   actionButton("actualizar", "Actualizar ahora", icon = icon("rotate"), class = "btn-outline-secondary"),
@@ -256,7 +262,7 @@ server <- function(input, output, session) {
 
   todo <- reactive({
     req(fuente$datos())
-    preparar(fuente$datos())
+    desde_corte(preparar(fuente$datos()), DESDE)
   })
 
   # El rango de fechas abarca todo el campo: se fija con los primeros datos y,

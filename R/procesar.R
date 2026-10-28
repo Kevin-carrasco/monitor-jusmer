@@ -58,6 +58,23 @@ preparar <- function(crudo) {
   d
 }
 
+# Momento desde el que se cuentan las sesiones (NULL: sin corte). Se lee al
+# iniciar la app, después de cargar .env.
+inicio_conteo <- function() {
+  x <- trimws(Sys.getenv("MONITOR_DESDE", INICIO_CONTEO_DEFAULT))
+  if (!nzchar(x) || tolower(x) == "todas") return(NULL)
+  desde <- as.POSIXct(x, tz = ZONA_HORARIA)
+  # Misma zona que d$inicio, para comparar sin avisos
+  attr(desde, "tzone") <- "UTC"
+  desde
+}
+
+# Deja fuera las sesiones iniciadas antes del corte (y las sin hora de inicio)
+desde_corte <- function(d, desde) {
+  if (is.null(desde)) return(d)
+  d[!is.na(d$inicio) & d$inicio >= desde, , drop = FALSE]
+}
+
 # Aplica los filtros de la barra lateral
 filtrar <- function(d, casos, forma, rango) {
   d <- d[d$acepta, , drop = FALSE]
